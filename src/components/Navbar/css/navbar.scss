@@ -1,3 +1,5 @@
+@import "../../../styles/variable.scss";
+
 i {
   margin-right: 10px;
 }
@@ -10,7 +12,7 @@ i {
 
 .navbar-mainbg {
   padding: 0;
-  background-color: #5161ce;
+  background-color: $navbar-color;
 }
 .navbar-btn {
   position: relative;
@@ -70,7 +72,8 @@ i {
         padding: 20px 20px;
         text-decoration: none;
         font-size: 15px;
-        color: rgba(255, 255, 255, 0.5);
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.712);
         transition-duration: 0.6s;
         transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
         i {
@@ -83,7 +86,8 @@ i {
 
 #navbarSupportedContent > ul > li.router-link-active > a {
   background-color: transparent;
-  color: #5161ce;
+  color: $navbar-color;
+  font-weight: 600;
   transition: all 0.7s;
 }
 
@@ -142,7 +146,7 @@ i {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  background-color: #5161ce;
+  background-color: $navbar-color;
   content: "";
 }
 

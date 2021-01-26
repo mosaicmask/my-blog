@@ -1,13 +1,13 @@
 <!--
  * @LastEditors: 赵兴
- * @LastEditTime: 2021-01-26 16:02:10
+ * @LastEditTime: 2021-01-26 16:14:34
 -->
 <template>
   <nav class="navbar navbar-expand-lg navbar-mainbg">
     <a
       class="navbar-brand navbar-logo"
       href="https://github.com/mosaicmask"
-    >mosiac</a>
+    ><i class="bi bi-github"></i>mosiac</a>
     <button
       class="navbar-toggler navbar-btn"
       type="button"
