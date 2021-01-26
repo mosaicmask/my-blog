@@ -1,13 +1,13 @@
 /*
  * @LastEditors: 赵兴
- * @LastEditTime: 2021-01-26 11:26:44
+ * @LastEditTime: 2021-01-26 15:34:32
  */
 import $ from 'jquery'
-// ---------Responsive-navbar-active-animation-----------
+// ---------Responsive-navbar-router-link-active-animation-----------
 function test() {
   var tabsNewAnim = $('#navbarSupportedContent');
   var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
-  var activeItemNewAnim = tabsNewAnim.find('.active');
+  var activeItemNewAnim = tabsNewAnim.find('.router-link-active');
   var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
   var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
   var itemPosNewAnimTop = activeItemNewAnim.position();
@@ -19,8 +19,8 @@ function test() {
     "width": activeWidthNewAnimWidth + "px"
   });
   $("#navbarSupportedContent").on("click", "li", function (e) {
-    $('#navbarSupportedContent ul li').removeClass("active");
-    $(this).addClass('active');
+    $('#navbarSupportedContent ul li').removeClass("router-link-active");
+    $(this).addClass('router-link-active');
     var activeWidthNewAnimHeight = $(this).innerHeight();
     var activeWidthNewAnimWidth = $(this).innerWidth();
     var itemPosNewAnimTop = $(this).position();

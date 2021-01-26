@@ -1,13 +1,13 @@
 <!--
  * @LastEditors: 赵兴
- * @LastEditTime: 2021-01-26 13:56:30
+ * @LastEditTime: 2021-01-26 15:08:23
 -->
 <template>
   <Navbar />
   <router-view />
 </template>
 <script>
-import Navbar from './components/Navbar.vue';
+import Navbar from './components/Navbar/Navbar.vue';
 export default {
   components: {
     Navbar,

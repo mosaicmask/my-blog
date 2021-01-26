@@ -1,6 +1,6 @@
 /*
  * @LastEditors: 赵兴
- * @LastEditTime: 2021-01-25 17:35:45
+ * @LastEditTime: 2021-01-26 16:01:14
  */
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 // ? Hash Mode
@@ -16,10 +16,30 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "Home" */ "../views/Home.vue"),
   },
   {
-    path: "/about",
-    name: "About",
+    path: "/photography",
+    name: "photography",
     component: () =>
-      import(/* webpackChunkName: "About" */ "../views/About.vue"),
+      import(
+        /* webpackChunkName: "photography" */ "../views/photography/photography.vue"
+      ),
+  },
+  {
+    path: "/myNotes",
+    name: "myNotes",
+    component: () =>
+      import(/* webpackChunkName: "myNotes" */ "../views/myNotes/myNotes.vue"),
+  },
+  {
+    path: "/myDemo",
+    name: "myDemo",
+    component: () =>
+      import(/* webpackChunkName: "myDemo" */ "../views/myDemo/myDemo.vue"),
+  },
+  {
+    path: "/aboutMe",
+    name: "aboutMe",
+    component: () =>
+      import(/* webpackChunkName: "aboutMe" */ "../views/aboutMe/aboutMe.vue"),
   },
 ];
 

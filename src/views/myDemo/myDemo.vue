@@ -1,9 +1,11 @@
 <!--
  * @LastEditors: 赵兴
- * @LastEditTime: 2021-01-26 16:04:10
+ * @LastEditTime: 2021-01-26 15:58:15
 -->
 <template>
-  <h1>this is Home page</h1>
+  <h1>
+    this is myDemo page
+  </h1>
 </template>
 
 <script lang="ts">
@@ -12,7 +14,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'Home',
+  name: 'myDemo',
 });
 </script>
 
