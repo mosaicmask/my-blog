@@ -1,29 +1,18 @@
 <!--
  * @LastEditors: 赵兴
- * @LastEditTime: 2021-01-27 16:29:15
+ * @LastEditTime: 2021-01-27 17:18:12
 -->
 <template>
   <Welcome v-if="showWelcome" />
   <div v-else>
-    <h1> this is my home page </h1>
-    <h1> this is my home page </h1>
-    <h1> this is my home page </h1>
-    <h1> this is my home page </h1>
-    <h1> this is my home page </h1>
-    <h1> this is my home page </h1>
-    <h1> this is my home page </h1>
-    <h1> this is my home page </h1>
-    <h1> this is my home page </h1>
-    <h1> this is my home page </h1>
-    <h1> this is my home page </h1>
-    <h1> this is my home page </h1>
-    <h1> this is my home page </h1>
-    <h1> this is my home page </h1>
-    <h1> this is my home page </h1>
-    <h1> this is my home page </h1>
-    <h1> this is my home page </h1>
-    <h1> this is my home page </h1>
-    <h1> this is my home page </h1>
+    <h1 class="animate__animated animate__bounce  animate__delay-2s">An animated element</h1>
+    <h1 class="animate__animated animate__bounce">An animated element</h1>
+    <h1 class="animate__animated animate__bounce">An animated element</h1>
+    <h1 class="animate__animated animate__bounce">An animated element</h1>
+    <h1 class="animate__animated animate__bounce">An animated element</h1>
+    <h1 class="animate__animated animate__bounce">An animated element</h1>
+    <h1 class="animate__animated animate__bounce">An animated element</h1>
+    <h1 class="animate__animated animate__bounce">An animated element</h1>
     <Footer />
   </div>
 </template>
@@ -40,22 +29,19 @@ export default defineComponent({
   name: 'Home',
   components: { Welcome, Footer },
   setup() {
-    // 首次加载
+    // 判断是否首次加载
     const showWelcome = ref(false);
     onMounted(() => {
+      // 根据是否存在会话缓存判断
       let isFalst = sessionStorage.getItem('isFalst');
-      console.log('typeof isFalst :>> ', typeof isFalst);
       typeof isFalst === 'object'
-        ? (showWelcome.value = true)
+        ? ((showWelcome.value = true), //更改状态
+          sessionStorage.setItem('isFalst', 'not'), //存入缓存
+          setTimeout(() => {
+            //设置定时器结束欢迎动画
+            showWelcome.value = false;
+          }, 7500))
         : (showWelcome.value = false);
-      sessionStorage.setItem('isFalst', 'not');
-      console.log(showWelcome.value);
-      if (showWelcome.value) {
-        setTimeout(() => {
-          showWelcome.value = false;
-          console.log(showWelcome.value);
-        }, 7500);
-      }
     });
     return {
       showWelcome,

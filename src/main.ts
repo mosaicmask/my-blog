@@ -1,6 +1,6 @@
 /*
  * @LastEditors: 赵兴
- * @LastEditTime: 2021-01-27 09:26:52
+ * @LastEditTime: 2021-01-27 17:11:45
  */
 import { createApp } from "vue";
 import App from "./App.vue";
@@ -16,6 +16,8 @@ import "nprogress/nprogress.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
+//animate
+import "animate.css";
 
 // vh-check
 import vhCheck from "vh-check";
