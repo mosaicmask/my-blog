@@ -1,9 +1,9 @@
 <!--
  * @LastEditors: 赵兴
- * @LastEditTime: 2021-01-27 10:36:21
+ * @LastEditTime: 2021-01-27 13:50:01
 -->
 <template>
-
+  <h1>this is Welcome page</h1>
 </template>
 
 <script lang="ts">
@@ -15,3 +15,5 @@ export default defineComponent({
   name: 'welcome',
 });
 </script>
+<style scoped src="./css/out/welcome.css">
+</style>
