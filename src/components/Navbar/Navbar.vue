@@ -1,6 +1,6 @@
 <!--
  * @LastEditors: 赵兴
- * @LastEditTime: 2021-01-26 16:14:34
+ * @LastEditTime: 2021-01-27 11:09:28
 -->
 <template>
   <nav class="navbar navbar-expand-lg navbar-mainbg">
@@ -9,7 +9,9 @@
       href="https://github.com/mosaicmask"
     ><i class="bi bi-github"></i>mosiac</a>
     <button
-      class="navbar-toggler navbar-btn"
+      class="navbar-toggler menu-toggle menu-toggle"
+      :class="btnFlg == 1?'clicked':''"
+      @click="changeBtnFlg"
       type="button"
       data-toggle="collapse"
       data-target="#navbarSupportedContent"
@@ -17,9 +19,7 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <span class="hamb-top"></span>
-      <span class="hamb-middle"></span>
-      <span class="hamb-bottom"></span>
+      <span></span>
     </button>
     <div
       class="collapse navbar-collapse"
@@ -66,13 +66,24 @@
 </template>
 
 <script lang="ts">
-import '../../assets/js/navbar.js';
+import '../../hooks/js/navbar.js';
 // 常用的Composition API:defineComponent,ref,reactive,toRef,toRefs
 // defineComponent 函数目的是定义一个组件 内部可以传入一个配置对象
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
   name: 'navbar',
+  setup() {
+    const btnFlg = ref(0);
+    function changeBtnFlg() {
+      if (btnFlg.value === 1) {
+        btnFlg.value = 0;
+      } else {
+        btnFlg.value = 1;
+      }
+    }
+    return { btnFlg, changeBtnFlg };
+  },
 });
 </script>
 

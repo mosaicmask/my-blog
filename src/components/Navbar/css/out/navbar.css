@@ -6,7 +6,7 @@ i {
 /*----------multi-level-accordian-menu------------*/
 .navbar-logo {
   padding: 15px;
-  color: #fff;
+  color: #ffffff;
 }
 
 .navbar-mainbg {
@@ -14,45 +14,63 @@ i {
   background-color: #ff7b54;
 }
 
-.navbar-btn {
+.menu-toggle {
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  background-color: #ff7b54;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.125s ease;
+}
+.menu-toggle.clicked {
+  outline: 0;
+  background-color: #ff7b54;
+}
+.menu-toggle.clicked span {
+  background-color: #ffffff;
+  transform: rotate(45deg);
+}
+.menu-toggle.clicked span:before {
+  background-color: #ffffff;
+  transform: rotate(90deg) translate(-1rem);
+}
+.menu-toggle.clicked span:after {
+  background-color: #ffffff;
+  transform: rotate(90deg) translate(1rem);
+  opacity: 0;
+}
+.menu-toggle span {
+  display: block;
+  width: 2.55rem;
+  height: 0.275rem;
+  border-radius: 99em;
+  background-color: #ffffff;
+  transition: 0.5s ease;
   position: relative;
-  margin-right: 10px;
-  width: 30px;
-  height: 30px;
 }
-.navbar-btn .hamb-top {
+.menu-toggle span:before, .menu-toggle span:after {
+  content: "";
+  display: block;
   position: absolute;
-  left: 0;
-  top: 5px;
+  height: 100%;
   width: 100%;
-  height: 3px;
-  background-color: rgba(255, 255, 255, 0.7);
-  transition: all 0.35s ease-in-out;
+  background-color: #ffffff;
+  border-radius: 99em;
+  transition: 0.5s ease;
 }
-.navbar-btn .hamb-middle {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  margin-top: -2px;
-  width: 100%;
-  height: 3px;
-  background-color: rgba(255, 255, 255, 0.7);
+.menu-toggle span:before {
+  top: 1rem;
 }
-.navbar-btn .hamb-bottom {
-  position: absolute;
-  left: 0;
-  bottom: 5px;
-  width: 100%;
-  height: 3px;
-  background-color: rgba(255, 255, 255, 0.7);
-  transition: all 0.35s ease-in-out;
+.menu-toggle span:after {
+  bottom: 1rem;
 }
 
-.navbar-btn:hover .hamb-top {
-  top: 2px;
-}
-.navbar-btn:hover .hamb-bottom {
-  bottom: 2px;
+:focus {
+  outline: 0;
 }
 
 #navbarSupportedContent {
